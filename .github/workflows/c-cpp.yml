@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: krystalgamer@1.0
+    - uses: krystalgamer/setup-psptoolchain@1.0
     - uses: actions/checkout@v2
     - name: Compile
       run: make
