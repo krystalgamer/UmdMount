@@ -36,10 +36,8 @@ int mount_thread(SceSize args, void *argp){
 		sceCtrlPeekBufferPositive(&pad, 1); 
 		if (pad.Buttons != 0){
 			if (pad.Buttons & PSP_CTRL_NOTE){
-				printf("Square pressed \n");
 				char *curUmd = sctrlSEGetUmdFile();
 				if(curUmd[0] == '\0'){
-					writeLog("Got Here");
 					sctrlSESetUmdFile("ms0:/ISO/updater.iso");
 					sctrlSESetBootConfFileIndex(MODE_VSHUMD);
 					sctrlSESetDiscType(0x10);
